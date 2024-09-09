@@ -6,6 +6,7 @@
 		<script src="index.js"></script>
 		<script src="switching-anim.js"></script>
 		<script src="name-anim.js"></script>
+		<script src="bg-anim.js"></script>
 	</head>
 	<body>
 		<div class="filler"></div>
@@ -38,92 +39,271 @@
 						</div>
 						<div class="names-outer">
 							<div class="name-break first">NEERAJDEV R</div>
-							<div class="name-break-gap" style="height: 2em;"></div>
+							<div class="name-break-gap"></div>
 							<div class="name-break second">
 								<div class="bottom">NEERAJDEV R</div>
 							</div>
 						</div>
+						<svg viewBox="0 0 100 100" id="m-square" class="m-shape" style="transform: translate(55vw, 20vh) rotate(30deg)">
+							<path d="M20 20 L80 20 L80 80 L20 80Z" stroke="#fff" mask="url(#mask-square-text)"></path>
+							<rect width="11" y="19.8" height="0.4" fill="black" style="transform: translate(38px, 0);" class="text-mask" />
+							<text y="21" font="normal 4px sans" font-size="2" fill="white" style="transform: translate(40px, 0);">PASSION</text>
+							<defs>
+								<mask id="mask-square-text">
+									<rect width="100" height="100" fill="white" />
+									<!--<rect width="13" y="18" height="4" fill="black" style="transform: translate(38px, 0);" class="text-mask" />-->
+								</mask>
+							</defs>
+						</svg>
+						<svg viewBox="0 0 100 100" id="m-triangle" class="m-shape" style="transform: translate(30vw, 75vh) rotate(-30deg)">
+							<path d="M20 20 L80 20 L50 80Z" stroke="#fff" mask="url(#mask-triangle-text)"></path>
+							<rect width="15" y="19.8" height="0.4" fill="black" style="transform: translate(38px, 0);" class="text-mask" />
+							<text y="21" font="normal 4px sans" font-size="2" fill="white" style="transform: translate(40px, 0);">PROFESSION</text>
+							<defs>
+								<mask id="mask-triangle-text">
+									<rect width="100" height="100" fill="white" />
+									<!--<rect width="17" y="18" height="4" fill="black" style="transform: translate(38px, 0);" class="text-mask" />-->
+								</mask>
+							</defs>
+						</svg>
 					</div>
 					<div class="para-part">
+						<svg viewBox="0 0 95 30" style="font: normal 4px Helvetica">
+							<defs>
+								<linearGradient id="fill-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop offset="0%" stop-color="rgba(168,203,255)" />
+									<stop offset="100%" stop-color="rgba(207,147,255)" />
+								</linearGradient>
+								<mask id="mask-1">
+									<rect x="38" y="2" width="19" height="8" fill="white" />
+								</mask>
+								<mask id="mask-2">
+									<rect x="4" y="18" width="32" height="8" fill="white" />
+								</mask>
+								<mask id="mask-3">
+									<rect x="59" y="18" width="32" height="8" fill="white" />
+								</mask>
+							</defs>
+							<text x="0" y="8" fill="#929292">
+								I’m a UI/UX designer passionate about crafting digital
+							</text>
+							<text x="38" y="8" fill="url(#fill-grad)" style="mask: url(#mask-1)">
+								passionate
+							</text>
+							<text x="1.5" y="16" fill="#929292">
+								experiences that blend beauty with usability, turning
+							</text>
+							<text x="4" y="24" fill="#929292">
+								complex problems into simple, elegant solutions.
+							</text>
+							<text x="4" y="24" fill="url(#fill-grad)" mask="url(#mask-2)">
+								complex problems
+							</text>
+							<text x="59" y="24" fill="url(#fill-grad)" mask="url(#mask-3)">
+								elegant solutions
+							</text>
+						</svg>
+						<!--
 						<p>I’m a UI/UX designer passionate about crafting digital experiences that blend beauty with usability, turning complex problems into simple, elegant solutions.</p>
+						<p class="grad-text"><span class="hidden">I’m a UI/UX designer </span><span class="show">passionate</span><span class="hidden"> about crafting digital experiences that blend beauty with usability, turning </span><span class="show">complex</span> <span class="show">problems</span><span class="hidden"> into simple, </span><span class="show">elegant</span> <span class="show">solutions</span><span class="hidden">.</span></p>
+						-->
 					</div>
 				</div>
 				<div class="crafts">
 					<h2>MY CRAFTS</h2>
 					<div class="crafts-list">
 						<div>
-							<img src="https://media.istockphoto.com/id/1419807637/vector/lord-rama-aiming-with-bow-and-arrow.jpg?s=612x612&w=0&k=20&c=640l-9AkdE3dHuGqifwFTWzWB58KVcPqTBFhQeikQVc=">
+							<img src="crafts/a.png">
 							<div>
-								<div class="title">Rama - Setubandhanam</div>
+								<div class="title">Quickit</div>
 								<div class="img-footer">
-									<div class="subtitle">Animated Film</div>
+									<div class="subtitle">Figma Plugin</div>
 									<div class="year">2024</div>
 								</div>
 							</div>
 						</div>
 						<div>
-							<img src="https://jyotishay.com/storage/files/blogs/Palm%20Reading%20In%20Vedic%20Astrology%20(9).png">
+							<img src="crafts/b.png">
 							<div>
-								<div class="title">Hanuman - Lankadahanam</div>
+								<div class="title">Film Box - OTT Platform</div>
 								<div class="img-footer">
-									<div class="subtitle">Animated Film</div>
-									<div class="year">2025</div>
+									<div class="subtitle">Web App</div>
+									<div class="year">2022</div>
 								</div>
 							</div>
 						</div>
 						<div>
-							<img src="https://jyotishay.com/storage/files/blogs/Palm%20Reading%20In%20Vedic%20Astrology%20(9).png">
+							<img src="crafts/c.png">
 							<div>
-								<div class="title">Hanuman - Lankadahanam</div>
+								<div class="title">Medical Insurance Services</div>
 								<div class="img-footer">
-									<div class="subtitle">Animated Film</div>
-									<div class="year">2025</div>
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2024</div>
 								</div>
 							</div>
 						</div>
 						<div>
-							<img src="https://media.istockphoto.com/id/1419807637/vector/lord-rama-aiming-with-bow-and-arrow.jpg?s=612x612&w=0&k=20&c=640l-9AkdE3dHuGqifwFTWzWB58KVcPqTBFhQeikQVc=">
+							<img src="crafts/d.png">
 							<div>
-								<div class="title">Rama - Setubandhanam</div>
+								<div class="title">ALOHA</div>
 								<div class="img-footer">
-									<div class="subtitle">Animated Film</div>
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2024</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<img src="crafts/e.png">
+							<div>
+								<div class="title">Zero Degree - Ice Cream Delivery</div>
+								<div class="img-footer">
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2022</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<img src="crafts/f.png">
+							<div>
+								<div class="title">Gift it - Online Gift Shopping</div>
+								<div class="img-footer">
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2022</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<img src="crafts/g.png">
+							<div>
+								<div class="title">Legal Documents Evaluating</div>
+								<div class="img-footer">
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2022</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<img src="crafts/h.png">
+							<div>
+								<div class="title">Delivery Service</div>
+								<div class="img-footer">
+									<div class="subtitle">Mobile App</div>
 									<div class="year">2024</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="last-page">
-					<div class="big-logo">
-						<img src="logo-big.svg">
+				<div class="big-logo">
+					<svg width="848" height="296" viewBox="0 0 848 296" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="848" height="296" fill="black"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M193 220L95.6345 8H0V278H58.0001V66L156 278H255.778L481.5 278V220H255.778V219.991H241V220H193ZM241 171.991H338V172H396.5V113.945H347.5V114H241V171.991ZM241 66H254.049V65.9998H318.5V8.00057L241 8.00022V66Z" fill="white"/>
+
+
+						<g clip-path="url(#clip1_84_1502)">
+							<path d="M566.724 65H539.684V9H566.244C576.404 9 583.524 14.76 583.524 23.16C583.524 29.56 578.884 34.52 572.004 36.2C579.764 37.4 584.724 42.68 584.724 49.8C584.724 58.76 577.364 65 566.724 65ZM549.204 17.56V32.36H565.924C570.724 32.36 574.004 29.16 574.004 24.68C574.004 20.52 570.964 17.56 566.644 17.56H549.204ZM549.204 40.68V56.36H567.204C572.004 56.36 574.964 52.92 574.964 48.44C574.964 43.88 571.444 40.68 566.324 40.68H549.204Z" fill="#0B0B0B"/>
+							<path d="M478.971 65H469.371V9H481.211L498.731 53.48L516.171 9H528.011V65H518.411V25.56L502.891 65H494.491L478.971 25.64V65Z" fill="#0B0B0B"/>
+							<path d="M457.799 65H448.199V9H457.799V65Z" fill="#0B0B0B"/>
+							<path d="M439.719 65H401.559V9H411.159V56.36H439.719V65Z" fill="#0B0B0B"/>
+							<path d="M365.44 66.1998C348.24 66.1998 337.28 54.3598 337.28 36.8398C337.28 19.8798 348 7.7998 365.44 7.7998C380 7.7998 390 16.2798 392.4 30.5998H382.56C380.8 21.7998 374.32 16.4398 365.44 16.4398C354.16 16.4398 347.12 24.3598 347.12 36.8398C347.12 49.6398 354.16 57.4798 365.44 57.4798C374.48 57.4798 380.8 52.2798 382.56 43.3998H392.4C389.84 57.9598 380.08 66.1998 365.44 66.1998Z" fill="#0B0B0B"/>
+						</g>
+						<g clip-path="url(#clip2_84_1502)">
+							<path d="M566.724 65H539.684V9H566.244C576.404 9 583.524 14.76 583.524 23.16C583.524 29.56 578.884 34.52 572.004 36.2C579.764 37.4 584.724 42.68 584.724 49.8C584.724 58.76 577.364 65 566.724 65ZM549.204 17.56V32.36H565.924C570.724 32.36 574.004 29.16 574.004 24.68C574.004 20.52 570.964 17.56 566.644 17.56H549.204ZM549.204 40.68V56.36H567.204C572.004 56.36 574.964 52.92 574.964 48.44C574.964 43.88 571.444 40.68 566.324 40.68H549.204Z" fill="#2C2C2C"/>
+							<path d="M478.971 65H469.371V9H481.211L498.731 53.48L516.171 9H528.011V65H518.411V25.56L502.891 65H494.491L478.971 25.64V65Z" fill="#2C2C2C"/>
+							<path d="M457.799 65H448.199V9H457.799V65Z" fill="#2C2C2C"/>
+							<path d="M439.719 65H401.559V9H411.159V56.36H439.719V65Z" fill="#2C2C2C"/>
+							<path d="M365.44 66.1998C348.24 66.1998 337.28 54.3598 337.28 36.8398C337.28 19.8798 348 7.7998 365.44 7.7998C380 7.7998 390 16.2798 392.4 30.5998H382.56C380.8 21.7998 374.32 16.4398 365.44 16.4398C354.16 16.4398 347.12 24.3598 347.12 36.8398C347.12 49.6398 354.16 57.4798 365.44 57.4798C374.48 57.4798 380.8 52.2798 382.56 43.3998H392.4C389.84 57.9598 380.08 66.1998 365.44 66.1998Z" fill="#2C2C2C"/>
+						</g>
+
+
+
+						<g clip-path="url(#clip3_84_1502)">
+							<path d="M847.914 277.2H807.994V221.2H847.194V229.84H817.514V244.24H844.394V252.64H817.514V268.56H847.914V277.2Z" fill="#0B0B0B"/>
+							<path d="M779.956 277.2H769.876L748.116 221.2H758.436L774.916 264.08L790.836 221.2H801.076L779.956 277.2Z" fill="#0B0B0B"/>
+							<path d="M743.929 277.2H704.009V221.2H743.209V229.84H713.529V244.24H740.409V252.64H713.529V268.56H743.929V277.2Z" fill="#0B0B0B"/>
+							<path d="M692.437 277.2H682.837V221.2H692.437V277.2Z" fill="#0B0B0B"/>
+							<path d="M630.953 277.2H621.353V221.2H630.953V244.24H661.673V221.2H671.273V277.2H661.673V252.88H630.953V277.2Z" fill="#0B0B0B"/>
+							<path d="M585.234 278.4C568.034 278.4 557.074 266.56 557.074 249.04C557.074 232.08 567.794 220 585.234 220C599.794 220 609.794 228.48 612.194 242.8H602.354C600.594 234 594.114 228.64 585.234 228.64C573.954 228.64 566.914 236.56 566.914 249.04C566.914 261.84 573.954 269.68 585.234 269.68C594.274 269.68 600.594 264.48 602.354 255.6H612.194C609.634 270.16 599.874 278.4 585.234 278.4Z" fill="#0B0B0B"/>
+							<path d="M509.92 277.2H500L522.88 221.2H532.48L555.44 277.2H545.52L539.84 263.36H515.6L509.92 277.2ZM527.76 233.6L519.04 254.88H536.4L527.76 233.6Z" fill="#0B0B0B"/>
+						</g>
+						<g clip-path="url(#clip4_84_1502)">
+							<path d="M847.914 277.2H807.994V221.2H847.194V229.84H817.514V244.24H844.394V252.64H817.514V268.56H847.914V277.2Z" fill="#2C2C2C"/>
+							<path d="M779.956 277.2H769.876L748.116 221.2H758.436L774.916 264.08L790.836 221.2H801.076L779.956 277.2Z" fill="#2C2C2C"/>
+							<path d="M743.929 277.2H704.009V221.2H743.209V229.84H713.529V244.24H740.409V252.64H713.529V268.56H743.929V277.2Z" fill="#2C2C2C"/>
+							<path d="M692.437 277.2H682.837V221.2H692.437V277.2Z" fill="#2C2C2C"/>
+							<path d="M630.953 277.2H621.353V221.2H630.953V244.24H661.673V221.2H671.273V277.2H661.673V252.88H630.953V277.2Z" fill="#2C2C2C"/>
+							<path d="M585.234 278.4C568.034 278.4 557.074 266.56 557.074 249.04C557.074 232.08 567.794 220 585.234 220C599.794 220 609.794 228.48 612.194 242.8H602.354C600.594 234 594.114 228.64 585.234 228.64C573.954 228.64 566.914 236.56 566.914 249.04C566.914 261.84 573.954 269.68 585.234 269.68C594.274 269.68 600.594 264.48 602.354 255.6H612.194C609.634 270.16 599.874 278.4 585.234 278.4Z" fill="#2C2C2C"/>
+							<path d="M509.92 277.2H500L522.88 221.2H532.48L555.44 277.2H545.52L539.84 263.36H515.6L509.92 277.2ZM527.76 233.6L519.04 254.88H536.4L527.76 233.6Z" fill="#2C2C2C"/>
+						</g>
+
+
+						<g clip-path="url(#clip6_84_1502)">
+							<path d="M618.813 171H608.333L592.493 115H602.493L614.173 157L625.613 115H634.573L646.093 157.08L657.773 115H667.773L651.933 171H641.453L630.093 129.16L618.813 171Z" fill="#0B0B0B"/>
+							<path d="M561.091 172.2C544.531 172.2 533.171 160.68 533.171 142.84C533.171 125.88 543.891 113.8 561.091 113.8C577.731 113.8 589.171 125.24 589.171 142.84C589.171 159.96 578.371 172.2 561.091 172.2ZM561.091 163.48C572.291 163.48 579.411 155.48 579.411 142.84C579.411 130.36 572.291 122.44 561.091 122.44C549.971 122.44 542.931 130.36 542.931 142.84C542.931 155.48 549.971 163.48 561.091 163.48Z" fill="#0B0B0B"/>
+							<path d="M490.487 171H480.887V115H508.247C518.887 115 526.247 121.48 526.247 130.84C526.247 137.72 521.367 143.4 513.927 145.32C517.607 146.04 520.247 148.28 521.607 151.72L528.807 171H518.567L512.087 153.32C511.287 151.08 509.447 149.88 506.887 149.88H490.487V171ZM490.487 123.64V141.4H507.767C513.687 141.4 516.727 137.16 516.727 132.28C516.727 127.16 513.207 123.64 507.767 123.64H490.487Z" fill="#0B0B0B"/>
+							<path d="M442 172.2C426.32 172.2 415.28 160.68 415.28 142.84C415.28 125.88 426 113.8 443.36 113.8C457.92 113.8 467.92 122.44 470.32 136.6H460.48C458.72 127.8 452.24 122.44 443.36 122.44C432.16 122.44 425.12 130.28 425.12 142.84C425.12 155.56 432.24 163.48 442.96 163.48C451.68 163.48 457.36 157.8 457.36 149.8H440.48V141.72H459.6C466.8 141.72 470.72 145.32 470.72 152.12V171H462.24V153.88H462.08C460.96 165.08 453.6 172.2 442 172.2Z" fill="#0B0B0B"/>
+						</g>
+						<g clip-path="url(#clip7_84_1502)">
+							<path d="M618.533 170.809H608.053L592.213 115.192H602.213L613.893 156.905L625.333 115.192H634.293L645.813 156.984L657.493 115.192H667.493L651.653 170.809H641.173L629.813 129.255L618.533 170.809Z" fill="#2C2C2C"/>
+							<path d="M560.811 172C544.251 172 532.891 160.559 532.891 142.841C532.891 125.997 543.611 114 560.811 114C577.451 114 588.891 125.362 588.891 142.841C588.891 159.844 578.091 172 560.811 172ZM560.811 163.34C572.011 163.34 579.131 155.395 579.131 142.841C579.131 130.447 572.011 122.581 560.811 122.581C549.691 122.581 542.651 130.447 542.651 142.841C542.651 155.395 549.691 163.34 560.811 163.34Z" fill="#2C2C2C"/>
+							<path d="M490.207 170.809H480.607V115.192H507.967C518.607 115.192 525.967 121.628 525.967 130.924C525.967 137.757 521.087 143.398 513.647 145.305C517.327 146.02 519.967 148.244 521.327 151.661L528.527 170.809H518.287L511.807 153.25C511.007 151.025 509.167 149.833 506.607 149.833H490.207V170.809ZM490.207 123.773V141.412H507.487C513.407 141.412 516.447 137.201 516.447 132.354C516.447 127.269 512.927 123.773 507.487 123.773H490.207Z" fill="#2C2C2C"/>
+							<path d="M441.72 172C426.04 172 415 160.559 415 142.841C415 125.997 425.72 114 443.08 114C457.64 114 467.64 122.581 470.04 136.644H460.2C458.44 127.904 451.96 122.581 443.08 122.581C431.88 122.581 424.84 130.367 424.84 142.841C424.84 155.474 431.96 163.34 442.68 163.34C451.4 163.34 457.08 157.699 457.08 149.753H440.2V141.729H459.32C466.52 141.729 470.44 145.304 470.44 152.058V170.808H461.96V153.805H461.8C460.68 164.929 453.32 172 441.72 172Z" fill="#2C2C2C"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_84_1502">
+								<rect width="511" height="58" fill="white" transform="translate(337 8)"/>
+							</clipPath>
+							<clipPath id="clip1_84_1502">
+								<rect width="247.444" height="58.4" fill="white" transform="translate(337.28 7.7998)"/>
+							</clipPath>
+							<clipPath id="clip2_84_1502">
+								<rect width="248" height="58" fill="white" transform="translate(337 8)"/>
+							</clipPath>
+							<clipPath id="clip3_84_1502">
+								<rect width="347.914" height="58.4" fill="white" transform="translate(500 220)"/>
+							</clipPath>
+							<clipPath id="clip4_84_1502">
+								<rect id="mask3" width="359" height="58" fill="white" transform="translate(496 220)"/>
+							</clipPath>
+							<clipPath id="clip5_84_1502">
+								<rect width="433" height="58" fill="white" transform="translate(415 114)"/>
+							</clipPath>
+							<clipPath id="clip6_84_1502">
+								<rect width="252.493" height="58" fill="white" transform="translate(415 114)"/>
+							</clipPath>
+							<clipPath id="clip7_84_1502">
+								<rect width="252.493" height="58" fill="white" transform="translate(415 114)"/>
+							</clipPath>
+						</defs>
+					</svg>
+				</div>
+				<div class="footer">
+					<div class="row">
+						<div class="flex">
+							<p class="section-title left-section grad-text">GET IN TOUCH</p>
+							<a class="email" href="mailto:neerajmundoli@gmail.com">neerajmundoli@gmail.com</a>
+							<a class="phone" href="tel:+918075999260">+91 807 599 9260</a>
+						</div>
+						<div class="">
+							<p class="section-title grad-text">LET'S CONNECT</p>
+							<div class="row">
+								<a class="sm">Linkedin</a>
+								<a class="sm">Behance</a>
+							</div>
+							<div class="row">
+								<a class="sm">X/Twitter</a>
+								<a class="sm">Dribble</a>
+							</div>
+							<div class="row">
+								<a class="sm">Whatsapp</a>
+								<a class="sm">Instagram</a>
+							</div>
+						</div>
 					</div>
-					<div class="footer">
-						<div class="row">
-							<div class="flex">
-								<p class="section-title grad-text">GET IN TOUCH</p>
-								<a class="email" href="mailto:neerajmundoli@gmail.com">neerajmundoli@gmail.com</a>
-							</div>
-							<div class="">
-								<p class="section-title grad-text">LET'S CONNECT</p>
-								<div class="row">
-									<p class="sm">Linkedin</p>
-									<p class="sm">Behance</p>
-								</div>
-								<div class="row">
-									<p class="sm">X/Twitter</p>
-									<p class="sm">Dribble</p>
-								</div>
-								<div class="row">
-									<p class="sm">Whatsapp</p>
-									<p class="sm">Instagram</p>
-								</div>
-							</div>
-						</div>
-						<div class="footer-text">
-							<p class="grad-text">
-								KEEP YOUR POSTURE STRAIGHT.
-							</p>
-						</div>
+					<div class="footer-text">
+						<p class="grad-text">
+						KEEP YOUR POSTURE STRAIGHT.
+						</p>
 					</div>
 				</div>
 			</div>
