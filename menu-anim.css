@@ -1,0 +1,120 @@
+.menu-icon {
+	background: none;
+	border: none;
+	font-size: 1.5em;
+	height: 3.5em;
+	width: 3.5em;
+	padding: 0;
+	position: absolute;
+	top: 0; right: 0;
+}
+.menu-icon div {
+	background-color: white;
+	position: absolute;
+	height: 0.3em;
+	width: 0.3em;
+}
+.menu {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: #0000;
+	z-index: 999;
+	font-size: 0.7em;
+	transition: background-color 1s;
+}
+.menu.hidden {
+	display: none;
+}
+.menu .menu-item {
+	position: fixed;
+	background-color: white;
+	transition: top 1s, right 1s, width 1s, height 1s, color 1s cubic-bezier(0.73,0,.53,0);
+	color: #0000;
+	height: 0.3em;
+	width: 0.3em;
+	border: none;
+	padding: 0;
+	overflow: hidden;
+	font-size: 1.5em;
+	text-align: center;
+}
+.menu.big {
+	background-color: #000000f7;
+	z-index: 999;
+}
+.s.l { right: 2.15em; }
+.s.r { right: 1.55em; }
+.s.t1 { top: 1.3em; }
+.s.t2 { top: 1.8em; }
+.s.t3 { top: 2.3em; }
+.menu .menu-item.first {
+	right: 2.15em;
+	top: 1.3em;
+}
+.menu .menu-item.second {
+	right: 1.55em;
+	top: 1.3em;
+}
+.menu .menu-item.third {
+	right: 2.15em;
+	top: 1.8em;
+}
+.menu .menu-item.fourth {
+	right: 1.55em;
+	top: 1.8em;
+}
+.menu .menu-item.fifth {
+	right: 2.15em;
+	top: 2.3em;
+}
+.menu .menu-item.sixth {
+	right: 1.55em;
+	top: 2.3em;
+}
+.menu.big .menu-item {
+	color: black;
+	width: 8em;
+	font-weight: bold;
+	height: 1.5em;
+	line-height: 1.5em;
+}
+.menu.big .menu-item.first {
+	top: 1em;
+	right: 1em;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 0.2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu-item.first svg {
+	height: 1.5em;
+	width: 1.5em;
+	flex: none;
+}
+.menu.big .menu-item.second {
+	top: calc(50dvh - 6.75em);
+	right: calc(50dvw - 2em);
+}
+.menu.big .menu-item.third {
+	top: calc(50dvh - 3.75em);
+	right: calc(50dvw - 6em);
+}
+.menu.big .menu-item.fourth {
+	top: calc(50dvh - 0.75em);
+	right: calc(50dvw - 2em);
+}
+.menu.big .menu-item.fifth {
+	top: calc(50dvh + 2.25em);
+	right: calc(50dvw - 6em);
+}
+.menu.big .menu-item.sixth {
+	top: calc(50dvh + 5.25em);
+	right: calc(50dvw - 2em);
+}
+.footer.make-relative {
+	position: relative;
+	margin: 0;
+	top: 0;
+}

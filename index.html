@@ -1,30 +1,76 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<title>Neerajdev R</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<meta content="I'm a UI/UX Designer passionate about crafting digital experience" name="description">
+		<meta content="Neerajdev R" property="og:title">
+		<meta content="I'm a UI/UX Designer passionate about crafting digital experience" property="og:description">
+		<meta content="/me-card.jpg" property="og:image">
+		<meta content="Neerajdev R" property="twitter:title">
+		<meta content="I'm a UI/UX Designer passionate about crafting digital experience" property="twitter:description">
+		<meta content="/me-card.jpg" property="twitter:image">
+		<meta content="website" property="og:type">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<link href="common.css" rel="stylesheet">
 		<link href="index.css" rel="stylesheet">
-		<title>Neeraj Dev R</title>
 		<script src="index.js"></script>
 		<script src="switching-anim.js"></script>
 		<script src="name-anim.js"></script>
 		<script src="bg-anim.js"></script>
+		<link href="menu-anim.css" rel="stylesheet">
+		<script src="menu-anim.js"></script>
 	</head>
 	<body>
-		<div class="filler"></div>
+		<div class="filler">
+			<div id="_crafts-list"></div>
+		</div>
+		<div class="height-finder"></div>
 		<div class="outer">
+			<div class="menu hidden">
+				<button class="menu-item first s l t1">
+					<svg viewBox="0 0 100 100">
+						<path d="M0,0 L100,100 M0,100 L100,0" stroke="currentColor" stroke-width="12" />
+					</svg>
+				</button>
+				<button data-to="my-crafts" class="menu-item second s r t1">My Crafts</button>
+				<a href="/me.html" class="menu-item third s l t2">Me</a>
+				<button data-to="contact" class="menu-item fourth s r t2">Contact</button>
+				<a href="https://drive.google.com/file/d/1IMgCIedfcmwoaCVL-jVuGuQXTLwB7aCH/view" class="menu-item fifth s l t3">Resume</a>
+				<a href="/fun.html" class="menu-item sixth s r t3">Fun</a>
+			</div>
 			<div class="container">
 				<header class="">
-					<a href="">
+					<a href="index.html" class="disabled">
 						<div class="icon">
 							<img src="logo.svg">
 						</div>
 					</a>
 					<nav>
-						<a href="">My Crafts</a>
-						<a href="">Me</a>
-						<a href="">Contact</a>
-						<a href="">Resume</a>
-						<a href="">Fun</a>
+						<button data-to="my-crafts">My Crafts</button>
+						<a href="/me.html">Me</a>
+						<button data-to="contact">Contact</button>
+						<a href="https://drive.google.com/file/d/1IMgCIedfcmwoaCVL-jVuGuQXTLwB7aCH/view">Resume</a>
+						<a href="/fun.html">Fun</a>
 					</nav>
+					<button class="menu-icon">
+						<div class="s l t1"></div>
+						<div class="s r t1"></div>
+						<div class="s l t2"></div>
+						<div class="s r t2"></div>
+						<div class="s l t3"></div>
+						<div class="s r t3"></div>
+					</button>
 				</header>
 				<div class="animation-1-container">
 					<div class="name-part">
@@ -71,14 +117,14 @@
 						<svg viewBox="0 0 95 30" style="font: normal 4px Helvetica">
 							<defs>
 								<linearGradient id="fill-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-									<stop offset="0%" stop-color="rgba(168,203,255)" />
-									<stop offset="100%" stop-color="rgba(207,147,255)" />
+								<stop offset="0%" stop-color="#A8CBFF" />
+								<stop offset="100%" stop-color="#CF93FF" />
 								</linearGradient>
 								<mask id="mask-1">
-									<rect x="38" y="2" width="19" height="8" fill="white" />
+									<rect x="37" y="2" width="19" height="8" fill="white" />
 								</mask>
 								<mask id="mask-2">
-									<rect x="4" y="18" width="32" height="8" fill="white" />
+									<rect x="4" y="18" width="34" height="8" fill="white" />
 								</mask>
 								<mask id="mask-3">
 									<rect x="59" y="18" width="32" height="8" fill="white" />
@@ -87,8 +133,10 @@
 							<text x="0" y="8" fill="#929292">
 								I’m a UI/UX designer passionate about crafting digital
 							</text>
-							<text x="38" y="8" fill="url(#fill-grad)" style="mask: url(#mask-1)">
-								passionate
+							<text x="0" y="8" mask="url(#mask-1)">
+								<tspan fill="none">I'm a UI/UX designer </tspan>
+								<tspan fill="url(#fill-grad)">passionate</tspan>
+								<tspan fill="none"> about crafting digital</tspan>
 							</text>
 							<text x="1.5" y="16" fill="#929292">
 								experiences that blend beauty with usability, turning
@@ -96,11 +144,10 @@
 							<text x="4" y="24" fill="#929292">
 								complex problems into simple, elegant solutions.
 							</text>
-							<text x="4" y="24" fill="url(#fill-grad)" mask="url(#mask-2)">
-								complex problems
-							</text>
-							<text x="59" y="24" fill="url(#fill-grad)" mask="url(#mask-3)">
-								elegant solutions
+							<text x="4" y="24" mask="url(#mask-2)" fill="url(#fill-grad)">complex problems</text>
+							<text x="4" y="24" mask="url(#mask-3)">
+								<tspan fill="none">complex problems into simple, </tspan>
+								<tspan fill="url(#fill-grad)">elegant solutions</tspan>
 							</text>
 						</svg>
 						<!--
@@ -112,7 +159,7 @@
 				<div class="crafts">
 					<h2>MY CRAFTS</h2>
 					<div class="crafts-list">
-						<div>
+						<a href="https://www.behance.net/gallery/205800639/Quickit-Figma-plugin" target="_blank">
 							<img src="crafts/a.png">
 							<div>
 								<div class="title">Quickit</div>
@@ -121,8 +168,8 @@
 									<div class="year">2024</div>
 								</div>
 							</div>
-						</div>
-						<div>
+						</a>
+						<a href="https://www.behance.net/gallery/158036497/Film-Box-OTT-Platform" target="_blank">
 							<img src="crafts/b.png">
 							<div>
 								<div class="title">Film Box - OTT Platform</div>
@@ -131,28 +178,8 @@
 									<div class="year">2022</div>
 								</div>
 							</div>
-						</div>
-						<div>
-							<img src="crafts/c.png">
-							<div>
-								<div class="title">Medical Insurance Services</div>
-								<div class="img-footer">
-									<div class="subtitle">Mobile App</div>
-									<div class="year">2024</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<img src="crafts/d.png">
-							<div>
-								<div class="title">ALOHA</div>
-								<div class="img-footer">
-									<div class="subtitle">Mobile App</div>
-									<div class="year">2024</div>
-								</div>
-							</div>
-						</div>
-						<div>
+						</a>
+						<a href="https://www.behance.net/gallery/147977717/ice-cream-app-ui-design-zero-degree-ice-cream" target="_blank">
 							<img src="crafts/e.png">
 							<div>
 								<div class="title">Zero Degree - Ice Cream Delivery</div>
@@ -161,8 +188,8 @@
 									<div class="year">2022</div>
 								</div>
 							</div>
-						</div>
-						<div>
+						</a>
+						<a href="https://www.behance.net/gallery/149513521/Gift-it-Online-gift-shopping-app-UI-UX-design" target="_blank">
 							<img src="crafts/f.png">
 							<div>
 								<div class="title">Gift it - Online Gift Shopping</div>
@@ -171,8 +198,8 @@
 									<div class="year">2022</div>
 								</div>
 							</div>
-						</div>
-						<div>
+						</a>
+						<a href="https://www.behance.net/gallery/152385921/Legal-documents-evaluating-app" target="_blank">
 							<img src="crafts/g.png">
 							<div>
 								<div class="title">Legal Documents Evaluating</div>
@@ -181,8 +208,8 @@
 									<div class="year">2022</div>
 								</div>
 							</div>
-						</div>
-						<div>
+						</a>
+						<a href="https://www.behance.net/gallery/206851831/Delivery-App" target="_blank">
 							<img src="crafts/h.png">
 							<div>
 								<div class="title">Delivery Service</div>
@@ -191,7 +218,27 @@
 									<div class="year">2024</div>
 								</div>
 							</div>
-						</div>
+						</a>
+						<a href="https://www.behance.net/gallery/206852887/Medical-Insurance-App-UI-Design" target="_blank">
+							<img src="crafts/c.png">
+							<div>
+								<div class="title">Medical Insurance Services</div>
+								<div class="img-footer">
+									<div class="subtitle">Mobile App</div>
+									<div class="year">2024</div>
+								</div>
+							</div>
+						</a>
+						<a href="https://www.behance.net/gallery/206859329/Logo-Design-ALOHA" target="_blank">
+							<img src="crafts/d.png">
+							<div>
+								<div class="title">ALOHA</div>
+								<div class="img-footer">
+									<div class="subtitle">Logo Design</div>
+									<div class="year">2024</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div class="big-logo">
@@ -287,16 +334,16 @@
 						<div class="">
 							<p class="section-title grad-text">LET'S CONNECT</p>
 							<div class="row">
-								<a class="sm">Linkedin</a>
-								<a class="sm">Behance</a>
+								<a class="sm" target="_blank" href="https://www.linkedin.com/in/neerajdev-r-34b47a243">Linkedin</a>
+								<a class="sm" target="_blank" href="https://www.behance.net/neerajdevr">Behance</a>
 							</div>
 							<div class="row">
-								<a class="sm">X/Twitter</a>
-								<a class="sm">Dribble</a>
+								<a class="sm" target="_blank" href="https://x.com/Neerajdev39475?t=V96uKdtiRJD8kclg9B1bXQ&s=09">X/Twitter</a>
+								<a class="sm" target="_blank" href="https://dribbble.com/Nee---raj">Dribble</a>
 							</div>
 							<div class="row">
-								<a class="sm">Whatsapp</a>
-								<a class="sm">Instagram</a>
+								<a class="sm" target="_blank" href="https://wa.me/+918075999260">Whatsapp</a>
+								<a class="sm" target="_blank" href="https://www.instagram.com/nee___raj?igsh=MTV1aWl6dWtkZWlnYg==">Instagram</a>
 							</div>
 						</div>
 					</div>

@@ -1,3 +1,4 @@
+let heightFinder;
 let screenHeight;
 
 let anim1Outer;
@@ -21,7 +22,7 @@ let paraPart, namePart;
 const GRAD_START = PARA_END + 300;
 const GRAD_END = GRAD_START + 1500;
 let grads;
-let gradPoints = [19, 32, 32];
+let gradPoints = [21, 33, 33];
 
 const CRAFT_START = GRAD_END+300;// + 600;
 let craftEnd, paraOutEnd;
@@ -38,9 +39,6 @@ let footerBox, footerHeight;
 let footerStart, footerEnd;
 
 let animSvg1, animSvg2;
-
-let header;
-let lastY = null;
 
 const splitName = (pos) => {
 	if(pos>NAME_SPLIT_END) {
@@ -199,19 +197,6 @@ const showFooter = (pos) => {
 	}
 }
 
-const showHeader = (pos) => {
-	if(lastY === null) {
-		lastY = pos;
-		return;
-	}
-	if(pos > lastY) {
-		header.style.top = '-6em'
-	} else if(pos < lastY) {
-		header.style.top = '0';
-	}
-	lastY = pos;
-}
-
 const nameAnim = (pos, max) => {
 	splitName(pos);
 	showAbouts(pos);
@@ -225,14 +210,16 @@ const nameAnim = (pos, max) => {
 }
 
 const nameAnimSetup = () => {
-	screenHeight = window.innerHeight;
+	screenHeight = heightFinder.offsetHeight;
 	craftHeight = crafts.offsetHeight;
-	craftEnd = CRAFT_START + (craftHeight + screenHeight)*2.5;
-	paraOutEnd = CRAFT_START + screenHeight*2.5;
-	minParaTop = paraPart.offsetHeight/2 + paraPart.offsetWidth*0.56*0.33;
-	logoInStart = craftEnd - screenHeight*2.5 - screenHeight*0.3;
+	const factor = 1.5
+	craftEnd = CRAFT_START + (craftHeight + screenHeight)*factor;
+	paraOutEnd = CRAFT_START + screenHeight*factor;
+	//minParaTop = paraPart.offsetHeight/2 + paraPart.offsetWidth*0.56*0.33;
+	minParaTop = paraPart.offsetHeight/2 + paraPart.offsetWidth*0.56;
+	logoInStart = craftEnd - screenHeight*factor - screenHeight*0.3;
 	logoInEnd = craftEnd;
-	logoClipStart = logoInStart + screenHeight * 2.5 * 0.5;
+	logoClipStart = logoInStart + screenHeight * factor * 0.5;
 	logoClip1W = 248;
 	logoClip2W = 252.493;
 	logoClip3W = 359;
@@ -251,7 +238,6 @@ const nameAnimInit = () => {
 	paraPart = document.querySelector('.para-part');
 	grads = [...document.querySelectorAll('.para-part mask rect')];
 	namePart = document.querySelector('.name-part');
-	header = document.querySelector('header');
 	crafts = document.querySelector('.crafts');
 	logoOuter = document.querySelector('.big-logo');
 	logoClip1 = document.querySelector('#clip2_84_1502 > rect');
@@ -260,5 +246,6 @@ const nameAnimInit = () => {
 	footerBox = document.querySelector('.footer');
 	animSvg1 = document.getElementById('m-square');
 	animSvg2 = document.getElementById('m-triangle');
+	heightFinder = document.querySelector('.height-finder');
 	nameAnimSetup();
 }

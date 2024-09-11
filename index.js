@@ -16,7 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		lastScrollY = pos;
 	})
 	bgAnimInit();
-	document.addEventListener('resize', (e) => {
+	const goToMyCrafts = () => {
+		window.scroll(0, paraOutEnd)
+		if(suddenHide) suddenHide();
+	}
+	const goToContact = () => {
+		window.scroll(0, footerEnd)
+		if(suddenHide) suddenHide();
+	}
+	const search = new URLSearchParams(window.location.search);
+	if(search.get('section')==='mycrafts') {
+		goToMyCrafts();
+	} else if(search.get('section')==='contact') {
+		goToContact();
+	}
+	document.querySelectorAll('[data-to="contact"]').forEach(i => i.addEventListener('click', goToContact));
+	document.querySelectorAll('[data-to="my-crafts"]').forEach(i => i.addEventListener('click', goToMyCrafts));
+	window.addEventListener('resize', (e) => {
 		nameAnimSetup();
 		nameAnim(
 			lastScrollY,

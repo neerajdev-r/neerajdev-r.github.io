@@ -1,0 +1,92 @@
+.content {
+	margin-top: 3em;
+	padding: 1px 2em;
+	font-size: 1.8em;
+	color: #929292;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+.content img {
+	width: 80vw;
+	align-self: flex-end;
+}
+.content div {
+	flex: 1;
+}
+.white {
+	color: white;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 4em 0;
+	text-align: center;
+}
+section h2 {
+	font-size: 2em;
+	text-transform: uppercase;
+	padding: 0 0.5em;
+}
+.row-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	width: 80%;
+	margin-top: 1.5em;
+}
+section h3 {
+	margin-top: -0.5em;
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+
+.row-list > div {
+	padding: 0.5em 1.5em;
+	border: solid 1px #a8cbff99;
+	border-radius: 0.1em;
+	font-size: 1.1em;
+}
+.dull {
+	color: #929292;
+}
+.slider-outer {
+	width: 100vw;
+	overflow: hidden;
+}
+.slider {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex: none;
+	gap: 2em;
+	animation: sliding 120s linear infinite;
+}
+@keyframes sliding {
+	from {
+		transform: translate(0%);
+	}
+	to {
+		transform: translate(-50%);
+	}
+}
+@media only screen and (min-width: 768px) {
+	.row-list {
+		width: 80%;
+	}
+	.content img {
+		margin: 0.7em 0 1em 1em;
+		width: 40vw;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.row-list {
+		width: 60%;
+	}
+}

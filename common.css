@@ -1,0 +1,172 @@
+a {
+	text-decoration: none;
+	color: white;
+}
+body {
+	background: #000;
+	margin: 0;
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.disabled {
+	pointer-events: none;
+}
+.grad-text {
+	color: transparent;
+	background: rgb(168,203,255);
+	background: linear-gradient(90deg, rgba(168,203,255) 0%, rgba(207,147,255) 100%); 
+	width: fit-content;
+	background-clip: text;
+}
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	height: 6em;
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 100;
+	background-color: black;
+	transition: top 0.8s;
+	font-size: 0.7em;
+}
+header .icon img {
+	height: 3.5em;
+	width: 3.5em;
+}
+header .icon {
+	padding: 1.25em;
+	margin: 0 1em;
+}
+header nav {
+	display: none;
+}
+header nav a, header nav button {
+	border: none;
+	background: rgb(168,203,255);
+	background: linear-gradient(90deg, rgba(168,203,255) 0%, rgba(207,147,255) 100%); 
+	width: fit-content;
+	background-clip: text;
+	color: #fff;
+	transition: color 0.3s;
+	font-size: 1em;
+	cursor: pointer;
+}
+header nav a:hover, header nav button:hover {
+	color: transparent;
+}
+.footer {
+	background: white;
+	position: fixed;
+	z-index: 3;
+	top: 100vh;
+	left: 0; right: 0;
+	transition: top 1s ease-out;
+	font-size: 0.9em;
+}
+.footer a, .footer {
+	color: black;
+}
+.footer a {
+	transition: color 0.3s;
+}
+.footer a:hover {
+	color: #0007;
+}
+.footer > .row {
+	padding: 2em 1em;
+}
+.footer .section-title.left-section {
+	margin-bottom: 2em;
+}
+.footer .section-title {
+	margin-bottom: 1em;
+}
+.footer .footer-text {
+	padding: 2em 1em 3em 1em;
+	opacity: 0.5;
+}
+.footer .footer-text > p {
+	font-size: 1.4em;
+	margin: 0;
+}
+.footer .email {
+	font-size: 1.4em;
+	display: block;
+}
+.footer .phone {
+	font-size: 1.2em;
+	display: block;
+	margin: 0.5em 0 2em 0;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.flex {
+	flex: 1;
+}
+.sm {
+	min-width: 8em;
+	margin: 0;
+	line-height: 2.3em;
+}
+@media only screen and (max-width: 767px) {
+	.footer > .row {
+		display: block;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.menu-icon {
+		display: none;
+	}
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2em;
+		height: 6em;
+		position: fixed;
+		top: 0; left: 0; right: 0;
+		z-index: 100;
+		background-color: black;
+		transition: top 0.8s;
+		font-size: 1em;
+	}
+	header nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3em;
+		margin-right: 2em;
+	}
+	.menu {
+		display: none;
+	}
+	.footer {
+		font-size: 1em;
+	}
+	.footer > .row {
+		padding: 1em 4em;
+	}
+	.footer .email {
+		font-size: 1.8em;
+	}
+	.footer .phone {
+		font-size: 1.2em;
+		margin: 0.5em 0 0 0;
+	}
+	.footer .footer-text > p {
+		font-size: 2em;
+		margin: 0;
+	}
+	.footer .footer-text {
+		padding: 2em 4em 3em 4em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
