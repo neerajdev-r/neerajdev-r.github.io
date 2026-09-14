@@ -1,0 +1,25 @@
+section#property-reveal{height:420svh;padding:0;border:0;position:relative;background:#080808;max-width:none;margin:0}
+.pr-pin{height:calc(100svh - 58px);position:sticky;top:58px;overflow:hidden;isolation:isolate;background:#080808}
+.pr-scene{position:absolute;width:100%;aspect-ratio:1440/926;top:50%;left:0;transform:translateY(-50%);overflow:hidden}
+.pr-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;max-width:none;display:block}
+.pr-onboard,.pr-listing,.pr-details{opacity:0;will-change:opacity}
+.pr-listing{clip-path:inset(0 69% 0 0)}.pr-details{clip-path:inset(0 0 0 68%)}
+.pr-skip{position:absolute;bottom:18px;right:24px;padding:8px 12px;background:#08080899;border:1px solid #ffffff30;border-radius:20px;font:11px Inter,Arial,sans-serif;color:#fff;z-index:3;text-decoration:none}
+.pr-track{position:absolute;bottom:0;left:0;width:100%;height:2px;background:#ffffff20}.pr-track i{display:block;height:100%;background:#ffce00;transform:scaleX(0);transform-origin:left}
+@media(max-width:700px){section#property-reveal{height:300svh}.pr-skip{bottom:16px;right:16px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){section#property-reveal{height:auto}.pr-pin{position:relative;top:0;height:auto;aspect-ratio:1440/926;min-height:250px}.pr-track{display:none}}
+.pr-scene{width:min(100%,calc((100svh - 58px)*1.5550756));left:50%;transform:translate(-50%,-50%)}
+.pr-extension{position:absolute;inset:0;background-image:url('assets/scroll-house-expanded.png');background-repeat:no-repeat;background-position:center;background-size:auto 100%;pointer-events:none}
+.pr-extension::after{content:'';position:absolute;inset:0;background:#000;opacity:var(--dim,0)}
+.pr-frame{mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent)}
+@media(min-aspect-ratio:3/1){.pr-extension{background-size:cover}}
+@media(max-width:700px){.pr-extension{background-size:auto 100%;opacity:.65}}
+/* A single seamless photograph; no composited photo panels or feathered seams. */
+.pr-scene{overflow:visible;pointer-events:none}
+.pr-extension::after{display:none}
+.pr-extension{opacity:1}
+.pr-onboard{position:absolute;left:36.3541667%;top:3.99568%;width:27.2916667%;height:92.00864%;border-radius:10% / 4.6%;box-shadow:0 0 0 200vmax rgb(0 0 0 / .64);overflow:hidden;z-index:1}
+.pr-onboard img{display:block;width:100%;height:100%}
+.pr-listing,.pr-details{position:absolute;object-fit:contain;clip-path:none;mask-image:none;height:auto;z-index:2;max-width:none}
+.pr-listing{left:8.206584%;top:13.28164%;width:21.782852%}
+.pr-details{left:68.847182%;top:13.31053%;width:21.765702%}

@@ -1,0 +1,4 @@
+#property-demo{margin:32px 0 0;padding:0;background:#080808;border:0;display:flex;justify-content:flex-start;align-items:center;overflow:hidden}
+.property-demo-video{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+@media(prefers-reduced-motion:no-preference){#property-demo.is-visible .property-demo-video{animation:property-demo-enter .8s cubic-bezier(.2,.65,.3,1) both}@keyframes property-demo-enter{from{transform:scale(.97)}to{transform:scale(1)}}}
+@media(max-width:800px){#property-demo{margin:24px 0 32px;justify-content:center}.property-demo-video{width:min(100%,390px)}}
