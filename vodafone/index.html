@@ -1,8 +1,35 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vodafone Fiji — UX case study</title><meta property="og:image" content="assets/vodafone-fiji-esim.webp"><meta property="og:title" content="Vodafone Fiji eSIM — UX case study"><link rel="canonical" href="https://neerajdev-r.github.io/vodafone/"><meta name="description" content="Connecting plan selection, identity verification and ongoing eSIM management. A product design case study by Neerajdev R."><link rel="stylesheet" href="vodafone-concise.css?v=service-screens"><script src="concise.js?v=service-screens" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vodafone Fiji — UX case study</title><meta property="og:image" content="assets/vodafone-fiji-esim.webp"><meta property="og:title" content="Vodafone Fiji eSIM — UX case study"><link rel="canonical" href="https://neerajdev-r.github.io/vodafone/"><meta name="description" content="Connecting plan selection, identity verification and ongoing eSIM management. A product design case study by Neerajdev R."><link rel="stylesheet" href="vodafone-concise.css?v=service-screens"><script src="concise.js?v=service-screens" defer></script><style id="case-study-consistency">
+/* Shared case-study typography and reading rhythm. */
+body{font-family:Inter,Arial,sans-serif;font-size:18px;line-height:1.7;background:#080808}
+.hero h1{font-family:Inter,Arial,sans-serif;font-size:clamp(64px,9vw,140px);font-weight:400;line-height:1;letter-spacing:-.065em;margin:0 0 30px;max-width:100%;overflow-wrap:normal}
+.hero p,.hero .intro{font-family:Inter,Arial,sans-serif;font-size:25px;line-height:1.4;font-weight:400;letter-spacing:-.02em;max-width:650px}
+.chapter,.ld-chapter{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:8%}
+.chapter{max-width:1500px;padding:90px 6%}
+.ld-heading h2,.heading h2,.chapter h2{font-family:Inter,Arial,sans-serif;font-size:clamp(28px,3vw,43px);font-weight:400;line-height:1.15;letter-spacing:-.035em;margin:0}
+.copy p,.copy li,.ld-copy p,.ld-copy li{font-size:18px;line-height:1.7;color:#aaa}
+.copy h3,.ld-copy h3{font-family:Inter,Arial,sans-serif;font-size:21px;line-height:1.35;font-weight:400;letter-spacing:-.015em;margin:28px 0 12px}
+.meta,.overview dl{font-family:Inter,Arial,sans-serif}
+.meta p,.overview dd{font-size:16px;line-height:1.5;color:#eee}
+.meta small,.meta span,.overview dt{display:block;font:400 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#999;margin:0 0 10px}
+nav[aria-label="Case study chapters"]{font:400 14px/1.5 Inter,Arial,sans-serif;padding:20px 6%;gap:28px;scrollbar-width:none}
+nav[aria-label="Case study chapters"] a{font-size:14px;line-height:1.5}
+nav[aria-label="Case study chapters"]::-webkit-scrollbar{display:none}
+.overview dl{margin-bottom:0}.project-overview .meta{margin-bottom:35px}
+@media(max-width:800px){
+ .hero h1{font-size:clamp(44px,10vw,78px)}
+ .hero p,.hero .intro{font-size:21px;line-height:1.4}
+ .chapter,.ld-chapter{grid-template-columns:minmax(0,1fr);gap:28px}
+ .chapter{padding:60px 24px}
+ .ld-heading h2,.heading h2,.chapter h2{font-size:30px;line-height:1.2}
+ .copy p,.copy li,.ld-copy p,.ld-copy li{font-size:16px;line-height:1.7}
+ .copy h3,.ld-copy h3{font-size:20px}
+ nav[aria-label="Case study chapters"]{padding:18px 24px;gap:24px}
+}
+</style></head>
 <body><a class="skip-link" href="#context">Skip to case study</a><main id="top">
 <section class="hero"><img src="assets/fiji.jpg" alt="A sailboat beside an island in Fiji" fetchpriority="high"><div class="hero-copy"><h1>Vodafone Fiji.</h1><p>Connecting plan selection, identity checks and eSIM management in one travel experience.</p></div></section>
-<div class="overview"><dl><div><dt>Role</dt><dd>UI/UX Designer</dd></div><div><dt>Timeline</dt><dd>April–June 2025</dd></div><div><dt>Scope</dt><dd>Desktop service &amp; mobile verification</dd></div></dl><p>Choose a connection. Complete setup. <span>Know what comes next.</span></p></div>
+<div class="overview"><dl><div><dt>Role</dt><dd>UI/UX Designer</dd></div><div><dt>Timeline</dt><dd>April–June 2025</dd></div><div><dt>Scope</dt><dd>Desktop service &amp; mobile verification</dd></div></dl></div>
 <nav aria-label="Case study chapters"><a href="../?section=mycrafts">← Portfolio</a><a href="#context">Challenge</a><a href="#problem">Research</a><a href="#selection">Design decisions</a><a href="#system">Across devices</a><a href="#outcome">Outcome</a></nav>
 
 <section class="chapter" id="context"><div class="heading"><h2>The challenge — make a complex setup feel connected.</h2></div><div class="copy"><p>A traveller needs more than an eSIM purchase page. They need to choose a suitable plan, verify their identity, pay, install the connection and find help when a step needs attention.</p><p>I worked on Vodafone Fiji’s desktop service and mobile verification experience. The scope extended from account access and group purchases to usage, billing and support.</p><p class="question">How might we keep travellers oriented across these steps, especially when they switch devices or need to try again?</p></div></section>
