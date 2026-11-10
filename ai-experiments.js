@@ -1,0 +1,5 @@
+const preview=document.querySelector('.experiment-cover');
+const frame=preview.querySelector('iframe');
+new ResizeObserver(()=>{const width=preview.clientWidth;const viewport=width<600?768:1440;const scale=width/viewport;frame.style.width=viewport+'px';frame.style.height=(preview.clientHeight/scale)+'px';frame.style.setProperty('--preview-scale',scale);}).observe(preview);
+preview.addEventListener('pointerenter',()=>preview.classList.add('is-hovered'));preview.addEventListener('pointerleave',()=>preview.classList.remove('is-hovered'));
+frame.addEventListener('load',()=>{const doc=frame.contentDocument;if(!doc)return;doc.addEventListener('click',event=>{if(event.target.closest('#adj-btn')){event.preventDefault();event.stopImmediatePropagation();const panel=doc.querySelector('#adj');panel.hidden=!panel.hidden;doc.querySelector('#adj-btn').setAttribute('aria-expanded',String(!panel.hidden));return;}if(event.target.closest('#adj'))return;event.preventDefault();event.stopImmediatePropagation();window.open('https://neerajdev-r.github.io/abc-bank/','_blank','noopener');},true);});

@@ -1,0 +1,28 @@
+/* Tiny wandering lights: separate flight and bioluminescent pulses. */
+header nav a.ai-nav{position:relative;isolation:isolate;color:#e1ceff;background:none;text-shadow:0 0 7px #c597ff55,0 0 18px #b27aff26;overflow:visible}
+header nav a.ai-nav::before{content:'';position:absolute;inset:-8px -12px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse,#b780ff16,transparent 72%)}
+header nav a.ai-nav:hover{color:#f3eaff;text-shadow:0 0 9px #c597ff70,0 0 19px #b27aff30}
+.ai-nav .fireflies{position:absolute;inset:-13px -12px;pointer-events:none;user-select:none;z-index:1}
+.ai-nav .fireflies i{position:absolute;width:2px;height:2px;border-radius:50%;background:#f5edb4;box-shadow:0 0 3px #eee994,0 0 7px #d5e97865;will-change:transform,opacity;animation-name:firefly-flight-a,firefly-pulse;animation-duration:13s,4.7s;animation-timing-function:ease-in-out,ease-in-out;animation-iteration-count:infinite}
+.fireflies i:nth-child(1){left:5%;top:8%;animation-delay:-2s,-.8s}
+.fireflies i:nth-child(2){right:4%;bottom:8%;animation-name:firefly-flight-b,firefly-pulse;animation-duration:17s,5.9s;animation-delay:-9s,-3.2s}
+.fireflies i:nth-child(3){left:1%;bottom:12%;animation-name:firefly-flight-c,firefly-pulse;animation-duration:11s,4.1s;animation-delay:-4s,-2s}
+.fireflies i:nth-child(4){right:0;top:10%;animation-name:firefly-flight-c,firefly-pulse;animation-duration:15s,6.3s;animation-delay:-10s,-4s;animation-direction:reverse,normal}
+.menu .ai-nav .fireflies{display:none}
+.menu.big .ai-nav{overflow:visible;text-shadow:0 0 10px #a782db30}
+.menu.big .ai-nav .fireflies{display:block}
+@keyframes firefly-flight-a{0%,100%{transform:translate(0,0)}12%{transform:translate(13px,-4px)}23%{transform:translate(20px,1px)}37%{transform:translate(41px,-6px)}48%{transform:translate(38px,-3px)}62%{transform:translate(68px,0)}75%{transform:translate(53px,-5px)}88%{transform:translate(21px,2px)}}
+@keyframes firefly-flight-b{0%,100%{transform:translate(0,0)}15%{transform:translate(-18px,4px)}27%{transform:translate(-29px,-1px)}39%{transform:translate(-24px,2px)}53%{transform:translate(-58px,6px)}67%{transform:translate(-77px,0)}81%{transform:translate(-49px,4px)}92%{transform:translate(-16px,-2px)}}
+@keyframes firefly-flight-c{0%,100%{transform:translate(0,0)}17%{transform:translate(-4px,-8px)}33%{transform:translate(1px,-12px)}46%{transform:translate(-3px,-17px)}61%{transform:translate(-7px,-11px)}78%{transform:translate(1px,-6px)}89%{transform:translate(-2px,-3px)}}
+@keyframes firefly-pulse{0%,100%{opacity:.12}14%{opacity:.2}25%{opacity:.85}32%{opacity:.42}40%{opacity:.7}57%{opacity:.16}80%{opacity:.08}}
+@media(prefers-reduced-motion:reduce){.ai-nav .fireflies i{animation:none;will-change:auto;opacity:.4}}
+/* Light text glow only; no badge or border. */
+header nav a.ai-nav{text-shadow:0 0 5px #c7a6ff70,0 0 12px #b98aff45,0 0 20px #b98aff1a}
+
+/* A tiny shooting star passes above the label, then disappears. */
+header nav a.ai-nav::after{content:'';position:absolute;left:-12px;top:-10px;width:24px;height:1px;pointer-events:none;transform:rotate(13deg);transform-origin:right center;background:linear-gradient(90deg,transparent 0%,#bc9aff66 60%,#f3eaff 100%);filter:drop-shadow(0 0 2px #c7a2ff);opacity:0;animation:ai-shooting-star 7s linear infinite}
+@keyframes ai-shooting-star{0%,68%{transform:translate(0,-5px) rotate(13deg);opacity:0}71%{opacity:.9}81%{transform:translate(125px,6px) rotate(13deg);opacity:.8}85%,100%{transform:translate(145px,8px) rotate(13deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){header nav a.ai-nav::after{animation:none;display:none}}
+/* Match the shared navigation selected state, keeping decorative effects separate. */
+header nav a.ai-nav.grad-text,header nav a.ai-nav[aria-current="page"],header nav a.ai-nav.grad-text:hover,header nav a.ai-nav[aria-current="page"]:hover{color:transparent;background:linear-gradient(90deg,#a8cbff 0%,#cf93ff 100%);background-clip:text;-webkit-background-clip:text;text-shadow:none}
+.menu.big a.ai-nav[aria-current="page"]{color:transparent;background:linear-gradient(90deg,#a8cbff 0%,#cf93ff 100%);background-clip:text;-webkit-background-clip:text;text-shadow:none}
